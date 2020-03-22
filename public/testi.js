@@ -62,19 +62,19 @@ function draw() {
   if (floor(((ajastin)-timer)/60) < 3) {
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(vh / 2);
+    textSize(min(vh, vw) / 2);
     text(3, vw/4, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 2) {
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(vh / 2);
+    textSize(min(vh, vw) / 2);
     text(2, vw/2, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 1) {
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(vh / 2);
+    textSize(min(vh, vw) / 2);
     text(1, vw/4*3, vh/2);
   }
   if (timer > (ajastin)) {
