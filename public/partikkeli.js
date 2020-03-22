@@ -6,7 +6,6 @@ function Partikkeli() {
   this.maxacc = 2;
 
   this.update = function() {
-    //this.acc.limit(this.maxacc);
     this.vel.add(this.acc);
     this.vel.limit(this.maxspeed);
     this.pos.add(this.vel);
@@ -15,27 +14,6 @@ function Partikkeli() {
 
   this.applyForce = function(force) {
     this.acc.add(force);
-  }
-
-  this.varomuita = function() {
-    let perception = scl;
-    let vaista = createVector();
-    let total = 0;
-    for (let other of partikkelit) {
-      let d = dist(this.pos.x, this.pos.y, other.pos.x, other.pos.y);
-      if (d < perception && other != this) {
-        let diff = p5.Vector.sub(this.pos, other.pos);
-        diff.div(d);
-        vaista.add(diff);
-        total++;
-      }
-      if (total > 0) {
-        vaista.div(total);
-        vaista.sub(this.vel);
-      }
-    }
-    vaista.setMag(1);
-    this.applyForce(vaista);
   }
 
   this.show = function() {

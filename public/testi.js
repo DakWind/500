@@ -1,6 +1,5 @@
 let scl;
 let noiseInc = 0.001;
-//let noiseInc = 0;
 let cols, rows;
 let noiseFactor = 0.25;
 let xoff = 0;
@@ -38,7 +37,6 @@ function setup() {
 }
 
 function draw() {
-  //background(0);
   for (y = 0; y < rows; y++) {
     for (x = 0; x < cols; x++) {
       let index = x + y * cols;
@@ -46,17 +44,6 @@ function draw() {
       let v = p5.Vector.fromAngle(angle);
       flowfield[index] = v;
       v.setMag(magni);
-
-      // tässä alla piirrettäisiin voimanuolet
-
-      // fill(255);
-      // stroke(255, 50);
-      // strokeWeight(1);
-      // push();
-      // translate(x*scl + scl / 2, y*scl + scl / 2);
-      // rotate(v.heading());
-      // line(0, 0, scl / 2, 0);
-      // pop();
     }
   }
   xoff += noiseInc / 2;
@@ -66,7 +53,6 @@ function draw() {
   for (i = 0; i < partikkelit.length; i++) {
     partikkelit[i].reunat();
     partikkelit[i].seuraa(flowfield);
-    //partikkelit[i].varomuita();
     partikkelit[i].update();
     partikkelit[i].show();
   }
