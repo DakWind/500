@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "500",
   "main": "index.js",
+  "start": "index.js",
   "dependencies": {
     "express": "^4.17.1"
   },
