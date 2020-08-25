@@ -14,6 +14,9 @@ let vw, vh;
 let ajastin = 60*60*2;
 let magni;
 let startangle;
+let red = 255;
+let green = 255;
+let blue = 255;
 
 function setup() {
   vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -60,6 +63,8 @@ function draw() {
   timer++;
 
   if (floor(((ajastin)-timer)/60) < 3) {
+    green = 0;
+    blue = 0;
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);

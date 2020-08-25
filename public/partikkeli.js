@@ -17,7 +17,7 @@ function Partikkeli() {
   }
 
   this.show = function() {
-    stroke(255, alpha);
+    stroke(red, green, blue, alpha);
     strokeWeight(1);
     point(this.pos.x, this.pos.y);
   }
