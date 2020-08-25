@@ -62,9 +62,12 @@ function draw() {
 
   timer++;
 
-  if (floor(((ajastin)-timer)/60) < 3) {
+  if (floor(((ajastin)-timer)/60) < 6) {
     green = 0;
     blue = 0;
+  }
+
+  if (floor(((ajastin)-timer)/60) < 3) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
