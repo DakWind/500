@@ -85,6 +85,8 @@ function draw() {
   if (timer > (ajastin)) {
     background(0);
     timer = 0;
+    green = 255;
+    blue = 255;
     partikkelit = [];
     magni = map(noise(random(1000)), 0, 1, 0.05, 0.35);
     anglescale = map(noise(random(1000)), 0, 1, 1, 3);
