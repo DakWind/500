@@ -17,7 +17,6 @@ let startangle;
 let red = 255;
 let green = 255;
 let blue = 255;
-let onlyonce = 1;
 
 function setup() {
   vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -64,10 +63,6 @@ function draw() {
   timer++;
 
   if (floor(((ajastin)-timer)/60) < 6) {
-    if (onlyonce = 1) {
-        filter(INVERT);
-    }
-    onlyonce = 0;
     green = 0;
     blue = 0;
   }
@@ -98,7 +93,6 @@ function draw() {
     timer = 0;
     green = 255;
     blue = 255;
-    onlyonce = 1;
     partikkelit = [];
     magni = map(noise(random(1000)), 0, 1, 0.05, 0.35);
     anglescale = map(noise(random(1000)), 0, 1, 1, 3);
