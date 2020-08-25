@@ -11,7 +11,7 @@ let anglescale;
 let alpha = 30;
 let timer = 0;
 let vw, vh;
-let ajastin = 60*60/4;
+let ajastin = 60*60*2;
 let magni;
 let startangle;
 let red = 255;
@@ -81,7 +81,7 @@ function draw() {
     fill(255);
     textSize(min(vh, vw) / 2);
     slowdown = 0.3;
-    koko = 2;    
+    koko = 2;
     //text(2, vw/2, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 1) {
