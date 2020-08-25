@@ -11,7 +11,7 @@ let anglescale;
 let alpha = 30;
 let timer = 0;
 let vw, vh;
-let ajastin = 60*60*2;
+let ajastin = 60*60/2;
 let magni;
 let startangle;
 let red = 255;
@@ -63,6 +63,7 @@ function draw() {
   timer++;
 
   if (floor(((ajastin)-timer)/60) < 6) {
+    filter(INVERT);
     green = 0;
     blue = 0;
   }
@@ -71,18 +72,21 @@ function draw() {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
+    magni = magni * 0.7;
     //text(3, vw/4, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 2) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
+    magni = magni * 0.7;
     //text(2, vw/2, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 1) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
+    magni = 0;
     //text(1, vw/4*3, vh/2);
   }
   if (timer > (ajastin)) {
