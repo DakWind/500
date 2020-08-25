@@ -8,6 +8,7 @@ function Partikkeli() {
   this.update = function() {
     this.vel.add(this.acc);
     this.vel.limit(this.maxspeed);
+    this.vel.mult(slowdown);
     this.pos.add(this.vel);
     this.acc.mult(0);
   }
@@ -18,7 +19,7 @@ function Partikkeli() {
 
   this.show = function() {
     stroke(red, green, blue, alpha);
-    strokeWeight(1);
+    strokeWeight(koko);
     point(this.pos.x, this.pos.y);
   }
 

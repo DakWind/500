@@ -17,6 +17,8 @@ let startangle;
 let red = 255;
 let green = 255;
 let blue = 255;
+let slowdown = 1;
+let koko = 1;
 
 function setup() {
   vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -71,21 +73,22 @@ function draw() {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
-    magni = magni * 0.7;
+    slowdown = 0.7;
     //text(3, vw/4, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 2) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
-    magni = magni * 0.7;
+    slowdown = 0.3;
+    koko = 2;    
     //text(2, vw/2, vh/2);
   }
   if (floor(((ajastin)-timer)/60) < 1) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
-    magni = 0;
+    slowdown = 0;
     //text(1, vw/4*3, vh/2);
   }
   if (timer > (ajastin)) {
@@ -93,6 +96,8 @@ function draw() {
     timer = 0;
     green = 255;
     blue = 255;
+    slowdown = 1;
+    koko = 1;
     partikkelit = [];
     magni = map(noise(random(1000)), 0, 1, 0.05, 0.35);
     anglescale = map(noise(random(1000)), 0, 1, 1, 3);
