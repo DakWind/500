@@ -11,7 +11,7 @@ let anglescale;
 let alpha = 30;
 let timer = 0;
 let vw, vh;
-let ajastin = 60*60/2;
+let ajastin = 60*60/4;
 let magni;
 let startangle;
 let red = 255;
