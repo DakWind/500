@@ -64,19 +64,19 @@ function draw() {
 
   timer++;
 
-  if (floor(((ajastin)-timer)/60) < 8) {
+  if (floor(((ajastin)-timer)/60) < 7) {
     green = 0;
     blue = 0;
   }
 
-  if (floor(((ajastin)-timer)/60) < 5) {
+  if (floor(((ajastin)-timer)/60) < 4) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
     slowdown = 0.7;
     //text(3, vw/4, vh/2);
   }
-  if (floor(((ajastin)-timer)/60) < 4) {
+  if (floor(((ajastin)-timer)/60) < 3) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
