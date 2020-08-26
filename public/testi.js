@@ -94,7 +94,7 @@ function draw() {
   if (floor(((ajastin)-timer)/60) < 1) {
     textAlign(CENTER, CENTER);
     fill(255);
-    textSize(min(vh, vw) / 2);
+    textSize(min(vh, vw) / 8);
     text('end.', vw/2, vh/2);
   }
   if (timer > (ajastin)) {
