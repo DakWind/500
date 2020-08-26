@@ -95,6 +95,7 @@ function draw() {
     textAlign(CENTER, CENTER);
     fill(255);
     stroke(255);
+    strokeWeight(1);
     textSize(min(vh, vw) / 16);
     text('end.', vw/2, vh/2);
   }
