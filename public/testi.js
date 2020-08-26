@@ -64,19 +64,19 @@ function draw() {
 
   timer++;
 
-  if (floor(((ajastin)-timer)/60) < 6) {
+  if (floor(((ajastin)-timer)/60) < 10) {
     green = 0;
     blue = 0;
   }
 
-  if (floor(((ajastin)-timer)/60) < 3) {
+  if (floor(((ajastin)-timer)/60) < 7) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
     slowdown = 0.7;
     //text(3, vw/4, vh/2);
   }
-  if (floor(((ajastin)-timer)/60) < 2) {
+  if (floor(((ajastin)-timer)/60) < 6) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
@@ -84,12 +84,18 @@ function draw() {
     koko = 2;
     //text(2, vw/2, vh/2);
   }
-  if (floor(((ajastin)-timer)/60) < 1) {
+  if (floor(((ajastin)-timer)/60) < 4) {
     textAlign(CENTER, CENTER);
     fill(255);
     textSize(min(vh, vw) / 2);
     slowdown = 0;
     //text(1, vw/4*3, vh/2);
+  }
+  if (floor(((ajastin)-timer)/60) < 1) {
+    textAlign(CENTER, CENTER);
+    fill(255);
+    textSize(min(vh, vw) / 2);
+    text('end.', vw/2, vh/2);
   }
   if (timer > (ajastin)) {
     background(0);
