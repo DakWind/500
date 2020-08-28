@@ -97,7 +97,7 @@ function draw() {
     stroke(255);
     strokeWeight(1);
     textSize(min(vh, vw) / 16);
-    text('end.', vw/2, vh/2);
+    //text('end.', vw/2, vh/2);
   }
   if (timer > (ajastin)) {
     background(0);
